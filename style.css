@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    padding:20px;
+    background:#0d1117;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+h1{
+    color:#00ff99;
+    font-size:40px;
+}
+
+.card{
+    background:#161b22;
+    margin:20px auto;
+    padding:20px;
+    max-width:400px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,255,153,0.25);
+}
+
+button{
+    background:#00ff99;
+    color:black;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:white;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    margin:10px 0;
+}
+
+#chatbox{
+    background:#0f172a;
+    min-height:120px;
+    padding:15px;
+    border-radius:10px;
+    text-align:left;
+}
