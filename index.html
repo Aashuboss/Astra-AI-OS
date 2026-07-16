@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astra AI OS</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astra AI OS</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🤖 Astra AI OS</h1>
+<div class="sidebar">
+    <h2>🤖 Astra AI</h2>
 
-    <h2>Welcome Boss</h2>
+    <a href="#">🏠 Dashboard</a>
+    <a href="#">📈 Trading Research</a>
+    <a href="#">🔍 Lead Finder</a>
+    <a href="#">💬 WhatsApp</a>
+    <a href="#">📧 Email</a>
+    <a href="#">🎤 Voice Assistant</a>
+    <a href="#">⏰ Reminder</a>
+    <a href="#">⚙ Settings</a>
+</div>
 
-    <p>Status : 🟢 Online</p>
+<div class="main">
+
+    <div class="topbar">
+        <h1>Astra AI OS</h1>
+        <p>🟢 Online</p>
+    </div>
 
     <div class="card">
-
-        <h2>🤖 Astra AI</h2>
-
-        <p id="status">
-            Yes Boss, Astra AI is Ready.
-        </p>
+        <h2>Welcome Boss 👋</h2>
+        <p>Your Personal AI Business & Trading Assistant</p>
 
         <button onclick="greetBoss()">
             🎤 Talk to Astra
         </button>
 
+        <p id="status">
+            Ready for your command...
+        </p>
     </div>
 
-    <div class="dashboard">
+    <div class="grid">
 
-        <div class="card" onclick="location.href='trading.html'">
-            <h2>📈 Trading Research</h2>
-            <p>AI Market Analysis & Trading Assistant</p>
+        <div class="card">
+            <h2>📈 Trading</h2>
+            <p>AI Trading Research</p>
         </div>
 
-        <div class="card" onclick="location.href='leads.html'">
+        <div class="card">
             <h2>🔍 Lead Finder</h2>
-            <p>Find Business Leads</p>
+            <p>Business Lead Search</p>
         </div>
 
-        <div class="card" onclick="location.href='whatsapp.html'">
-            <h2>💬 WhatsApp Assistant</h2>
-            <p>Send WhatsApp Messages</p>
+        <div class="card">
+            <h2>💬 WhatsApp</h2>
+            <p>Send Messages</p>
         </div>
 
-        <div class="card" onclick="location.href='email.html'">
-            <h2>📧 Email Assistant</h2>
-            <p>Write & Send Emails</p>
+        <div class="card">
+            <h2>📧 Email</h2>
+            <p>Write Emails</p>
         </div>
 
-        <div class="card" onclick="location.href='reminder.html'">
+        <div class="card">
+            <h2>🎤 Voice</h2>
+            <p>Voice Commands</p>
+        </div>
+
+        <div class="card">
             <h2>⏰ Reminder</h2>
-            <p>Set Alarm & Reminder</p>
-        </div>
-
-        <div class="card" onclick="location.href='voice.html'">
-            <h2>🎤 Voice Assistant</h2>
-            <p>Talk with Astra AI</p>
+            <p>Set Reminder</p>
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
