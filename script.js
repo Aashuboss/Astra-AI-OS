@@ -1,39 +1,70 @@
-// ==========================
-// ASTRA AI OS v1.0
-// ==========================
+function greetBoss() {
 
-window.onload = function () {
+    const status = document.getElementById("status");
 
-    speak("Yes Boss. Astra AI is online.");
+    status.innerHTML = "🎤 Listening Boss...";
 
-};
+    const SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+        status.innerHTML = "❌ Voice Recognition is not supported in this browser.";
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+
+    recognition.lang = "en-IN";
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+
+        const command = event.results[0][0].transcript.toLowerCase();
+
+        status.innerHTML =
+            "🗣️ You Said: <br><br><b>" + command + "</b>";
+
+        if (command.includes("hello")) {
+            speak("Hello Boss, I am ready.");
+        }
+
+        else if (command.includes("trading")) {
+            speak("Opening Trading Research.");
+            window.location.href = "trading.html";
+        }
+
+        else if (command.includes("lead")) {
+            speak("Opening Lead Finder.");
+            window.location.href = "leads.html";
+        }
+
+        else if (command.includes("whatsapp")) {
+            speak("Opening WhatsApp Assistant.");
+            window.location.href = "whatsapp.html";
+        }
+
+        else if (command.includes("email")) {
+            speak("Opening Email Assistant.");
+            window.location.href = "email.html";
+        }
+
+        else {
+            speak("Sorry Boss, I did not understand.");
+        }
+
+    };
+
+}
 
 function speak(text) {
 
-    const speech = new SpeechSynthesisUtterance(text);
+    const speech = new SpeechSynthesisUtterance();
 
-    speech.lang = "en-US";
-    speech.rate = 0.9;
-    speech.pitch = 1;
+    speech.text = text;
+
+    speech.lang = "en-IN";
 
     window.speechSynthesis.speak(speech);
-}
 
-function greetBoss() {
-
-    let hour = new Date().getHours();
-
-    let message = "";
-
-    if (hour < 12) {
-        message = "Good Morning Boss.";
-    } else if (hour < 17) {
-        message = "Good Afternoon Boss.";
-    } else {
-        message = "Good Evening Boss.";
-    }
-
-    document.getElementById("status").innerHTML = message;
-
-    speak(message);
 }
