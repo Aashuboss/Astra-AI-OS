@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Research - Astra AI OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📈 Trading Research</h1>
+
+<div class="card">
+    <h2>Market Research</h2>
+
+    <input type="text" id="marketInput"
+        placeholder="Example: Bank Nifty, Nifty, BTC">
+
+    <button onclick="researchMarket()">
+        🔍 Research
+    </button>
+
+    <div id="chatbox">
+        Welcome Boss! Enter a market name to begin your research.
+    </div>
+
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+        ⬅ Back to Dashboard
+    </button>
+
+</div>
+
+<script>
+function researchMarket(){
+
+    let market=document.getElementById("marketInput").value;
+
+    let result=document.getElementById("chatbox");
+
+    if(market==""){
+        result.innerHTML="❌ Please enter a market name.";
+        return;
+    }
+
+    result.innerHTML=
+    "<b>Research Result:</b><br><br>"+
+    "Market : "+market+"<br><br>"+
+    "Trend : Waiting for AI Integration.<br>"+
+    "Support : --<br>"+
+    "Resistance : --<br>"+
+    "Risk : Medium<br><br>"+
+    "Version 1.0 Placeholder";
+}
+</script>
+
+</body>
+</html>
